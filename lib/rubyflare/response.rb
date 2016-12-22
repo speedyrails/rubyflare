@@ -21,6 +21,10 @@ module Rubyflare
       body[:result]
     end
 
+    def result_info
+      body[:result_info]
+    end
+
     def successful?
       body[:success]
     end
