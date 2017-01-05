@@ -5,12 +5,12 @@ module Rubyflare
     def initialize(method_name, endpoint, response)
       @body = JSON.parse(response, symbolize_names: true)
 
-      unless successful?
-        message = "Unable to #{method_name.to_s.upcase} to endpoint: " \
-                  "#{endpoint}. Inspect Rubyflare::ConnectionError#response "\
-                  "for further details"
-        raise Rubyflare::ConnectionError.new(message, self)
-      end
+      # unless successful?
+      #   message = "Unable to #{method_name.to_s.upcase} to endpoint: " \
+      #             "#{endpoint}. Inspect Rubyflare::ConnectionError#response "\
+      #             "for further details"
+      #   raise Rubyflare::ConnectionError.new(message, self)
+      # end
     end
 
     def result
